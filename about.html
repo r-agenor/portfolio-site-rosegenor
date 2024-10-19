@@ -15,8 +15,10 @@
 <body id="about">
 
 	<header>
-		<div>
-            <img src="img/temp_logo.png" alt="Rose Agenor Designs" >
+		<div class="container">
+            <a href="index.html">
+            <img src="img/temp_logo.png" alt="Rose Agenor Designs" class="logo">
+             </a>
             <nav>
                 <ul>
 
@@ -30,20 +32,20 @@
 	</header>
 <main>
     <!--First row for content block -->
-    <div>
-        <div>
+    <div id="heading1">
+        <div class="container">
             <h1>Get to know me outside of design!</h1>
         </div>
     </div>
 
     <div><!--Second row for content block []-->
-        <div><!--this is for remaining content-->
-            <picture>
+        <div class="container"><!--this is for remaining content-->
+            <picture >
                 <source srcset="img/me1x.png" media="(max-width:767px)">
-                <img src="img/me2x.png" alt="My Image">
+                <img src="img/me2x.png" alt="My Image" >
             </picture>
 
-        <div><!--this div will hold our two columns-->
+        <div class="row"><!--this div will hold our two columns-->
 
             <div><!--First Column-->
                 <h2>My Story</h2>
@@ -58,7 +60,7 @@
 
             <div><!--Second Column-->
                 <h2>Skills and Tools</h2>
-                    <div><!--over arching row for skills column and tools column(this will allow them to move around acting as two columns instead of two rows on tablets)-->
+                    <div class="row"><!--over arching row for skills column and tools column(this will allow them to move around acting as two columns instead of two rows on tablets)-->
                         
                              <div><!--column for skills-->
                                 <h3>My Relevant Skills</h3>
@@ -69,9 +71,9 @@
                                     <li>User Reseach and Usability Testing </li>
                                     <li>User Personas and Journey Maps </li>
                                 </ul>
-                        </div><!--End of Skills Column-->
+                        </div><!--End of Skills column-->
 
-                        <div><!--Start of Tools Column-->
+                        <div><!--Start of Tools column-->
                             <h3>My Tool Box</h3>
                             <ul>
                                 <li>Figma</li>
@@ -79,7 +81,7 @@
                                 <li>Canva</li>
                                 <li>Illustrator</li>
                             </ul>
-                        </div><!--End of Tools Column-->
+                        </div><!--End of Tools column-->
 
                     </div>
 
@@ -92,28 +94,29 @@
 
 <!--This is for footer-->
 <footer>
-    <div>
+    <div class="container" id="contact">
         <h2>Lets get in touch!</h2>
         <p>Want to discuss work oppportunities? Please feel free to contact me!</p>
-        <div>
+        <div class="row">
             <a href="mailto:roseagenor@gmail.com?subject=Let's%20Work%20Together!" class="button contact">Email Me</a>
         </div>
         <div>
             <!--Social Media Layout and Placeholders-->
             
             <a href="http://www.linkedin.com/in/rose-agenor" target="_blank">
-                <img src="img/sm-icons/linkedinicon.svg" alt="LINKEDIN-URL">
+                <img src="img/sm-icons/linkedinicon.svg" alt="LINKEDIN-URL" class="icon">
             </a>
             <a href="https://www.behance.net/roseagenor" target="_blank">
-                <img src="img/sm-icons/behance_icon.svg" alt="Behance Icon">
+                <img src="img/sm-icons/behance_icon.svg" alt="Behance Icon" class="icon">
             </a>
+            <!--
             <a href="ANOTHER-SOCIAL-LINK">
                 <img src="http://via.placeholder.com/32x32" alt="Behance URL">
             </a>
             <a href="ANOTHER-SOCIAL-LINK">
                 <img src="http://via.placeholder.com/32x32" alt="Social Link URL">
             </a>
-        
+        -->
             </div>
             <p>Copyright Rose Agenor 2024</p>
     </div>

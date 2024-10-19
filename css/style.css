@@ -2,10 +2,13 @@
     Backgrounds: f5f3f0(off white)
     Primary: Greens: 002f18(dark green) 7c9948 (asparagus green) c9d57c (deco-lighter green)
     Secondary: Browns: b2967d(brown) 645445(darker brown)    
-    Accessory: Pinks:  e6beae(rose) e7d8c9(nude) eee4e1(pale blush)*/
+    Accessory: Pinks:  e6beae(rose) e7d8c9(nude) eee4e1(pale blush) f5f3f0*/
 
 
 /* Typography */
+*{
+  box-sizing: border-box;
+}
     body {
         background-color: #f5f3f0;
         font-family: "Roboto", sans-serif;
@@ -47,21 +50,21 @@
       - Likewise, a:active must come after a:hover in the CSS definition in order to work.
 */
 
-    a {
-        color: #002f18;
-        text-decoration: none; /* No underlining */
-      }
-      a:hover {
-        color: #e3a5a1;
-        text-decoration: underline; /* Underlining when hovering over a link */
-      }
+    a 
+       { color: #002f18;
+        text-decoration: none; /* No underlining */  }
 
-      a:visited { /* visited link */
-        color: #7c9948;
-      }
-      a:active { /* selected link */
-        color: #645445;
-      }
+      a:hover 
+      { color: #e3a5a1;
+        text-decoration: underline; /* Underlining when hovering over a link */  }
+     
+
+      a:visited /* visited link */
+      {   color: #645445; }
+      
+      a:active /* selected link */
+      {    color: #645445; }
+
 
 /* When styling Buttons, here is everything that must be included
     -Its primary color as the background color;
@@ -85,13 +88,13 @@
       }
 
       .button:hover {
-        opacity: 0.9; /* Reduces the opacity of the button to 80% */
+        opacity: 0.8; /* Reduces the opacity of the button to 80% */
         color: #ffffff;
         text-decoration: none;
       }
 
      .button:active {
-      opacity: 0.9; /* Reduces the opacity of the button to 80% */
+      opacity: 0.8; /* Reduces the opacity of the button to 80% */
       color: #ffffff;
       text-decoration: none;
     }
@@ -112,3 +115,114 @@
       background-color: #645445;
       color: #ffffff;
     }
+
+    /* Layout Styling */
+
+    .container{
+      padding: 0 15px;
+    }
+    
+    .row{
+      margin: 25px 0; /*25px top and bottom, 0 left and right*/
+    }
+
+    #work .row{ /* using this ID, you are only styling elements with both the work id and the row class*/
+      padding-bottom: 25px;
+      border-bottom: 1px solid #002f18;
+    }
+
+    #hero h1{
+      text-align: center; /*centers text*/
+    }
+
+    #heading1 h1{
+      text-align: center;
+    }
+
+    .logo{        
+      max-width: 250px;
+    }
+
+    header {
+      background-color: #c9d57c;
+      text-align: center;
+      padding: 10px;
+      /*margin: 10px 10px 0px 10px; */
+      border-bottom: 3px solid #4a4a4a; 
+      position: relative;
+      
+      /* box shadow*/
+
+      width: [object Object]px; 
+      height: [object Object]px; 
+      /*background: #F8F8F8; 
+      border: solid #BDBDBD 1px; */
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7)  ; 
+      -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7)  ; 
+      -moz-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7)  ; 
+    }
+
+/* Navigation Styling */
+    nav > ul {
+      list-style-type: none;
+      padding: 0;
+      width: 100%
+    }
+
+    nav > ul > li{
+      display: inline-block;
+    }
+
+    nav > ul > li > a {
+      padding: 0 15px;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #002f18;
+    }
+
+    nav > ul > li > a:visited {
+      color: #002f18;
+      text-decoration: underline;
+    }
+
+    nav > ul > li > a:hover {
+      color: #eee4e1;
+      text-decoration: underline;
+    }
+
+    nav > ul > li > a:active {
+
+      color: #eee4e1;
+    }
+
+/*The Hero Section*/
+#hero {
+  background-color: #c9d57c;
+  padding: 20px 0;
+  display: inline-block;
+  width: 100%;
+}
+
+
+
+/* Footer Styling */
+footer{
+  background-color: #c9d57c;
+  padding: 10px;
+  margin: 25px 0px 0px 0px;
+
+  /*box shadow*/
+
+  width: [object Object]px; 
+	height: [object Object]px; 
+	border: solid #BDBDBD 1px; 
+	box-shadow: 0 0 21px rgba(0, 0, 0, 0.4) inset; 
+	-webkit-box-shadow: 0 0 21px rgba(0, 0, 0, 0.4) inset; 
+	-moz-box-shadow: 0 0 21px rgba(0, 0, 0, 0.4) inset; 
+}
+
+
+.icon{
+  max-width: 32px
+}
+
