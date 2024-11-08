@@ -5,7 +5,9 @@
     Accessory: Pinks:  e6beae(rose) e7d8c9(nude) eee4e1(pale blush) f5f3f0*/
 
 
-/* Typography */
+/*=================================
+         Typography 
+=================================*/
 *{
   box-sizing: border-box;
 }
@@ -44,8 +46,10 @@
         width:100%;
       }
 
-/* Hyperlinks and Buttons 
-
+/*=================================
+      Hyperlinks and Buttons 
+=================================*/
+/*
       - a:hover must come after a:visited in the CSS definition in order to be effective! 
       - Likewise, a:active must come after a:hover in the CSS definition in order to work.
 */
@@ -85,6 +89,7 @@
         border: 2px solid #002f18;
         border-bottom: 2px solid #002f18; /* width of the border, type, color */
         transition: 0.2s opacity;
+        
       }
 
       .button:hover {
@@ -114,9 +119,13 @@
     .button.contact:active {
       background-color: #645445;
       color: #ffffff;
+      box-shadow: 0 5px #666;
+      transform: translateY(4px);
     }
 
-    /* Layout Styling */
+/*=================================
+          Layout Styling 
+=================================*/
 
     .container{
       padding: 0 15px;
@@ -133,6 +142,10 @@
 
     #hero h1{
       text-align: center; /*centers text*/
+    }
+
+    #work h2{
+      text-align: center;
     }
 
     #heading1 h1{
@@ -153,7 +166,7 @@
       
       /* box shadow*/
 
-      width: [object Object]px; 
+     /* width: [object Object]px; 
       height: [object Object]px; 
       /*background: #F8F8F8; 
       border: solid #BDBDBD 1px; */
@@ -162,7 +175,9 @@
       -moz-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7)  ; 
     }
 
-/* Navigation Styling */
+/*=================================
+          Navigation Styling 
+=================================*/
     nav > ul {
       list-style-type: none;
       padding: 0;
@@ -178,6 +193,7 @@
       text-transform: uppercase;
       font-weight: 700;
       color: #002f18;
+      
     }
 
     nav > ul > li > a:visited {
@@ -187,7 +203,7 @@
 
     nav > ul > li > a:hover {
       color: #eee4e1;
-      text-decoration: underline;
+      text-decoration: none;
     }
 
     nav > ul > li > a:active {
@@ -195,7 +211,43 @@
       color: #eee4e1;
     }
 
-/*The Hero Section*/
+/*===============================
+      Animation for Navigation 
+================================= */
+
+nav.navi a:before, nav.navi a:after
+{
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: #FFF;
+    content: "";
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+nav.navi a:before
+{
+    top: 0px;
+    transform: translateY(10px);
+}
+
+nav.navi a:after
+{
+    bottom: 0px;
+    transform: translateY(-10px);
+}
+
+nav.navi  a:hover:before, nav.navi  a:hover:after
+{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+/*=================================
+          The Hero Section
+=================================*/
 #hero {
   background-color: #c9d57c;
   padding: 20px 0;
@@ -205,16 +257,19 @@
 
 
 
-/* Footer Styling */
+/*=============================== 
+          Footer Styling 
+=================================*/
 footer{
   background-color: #c9d57c;
   padding: 10px;
   margin: 25px 0px 0px 0px;
+  text-align: center;
 
-  /*box shadow*/
+/* Box Shadow */
 
-  width: [object Object]px; 
-	height: [object Object]px; 
+ /* width: [object Object]px; 
+	height: [object Object]px; */
 	border: solid #BDBDBD 1px; 
 	box-shadow: 0 0 21px rgba(0, 0, 0, 0.4) inset; 
 	-webkit-box-shadow: 0 0 21px rgba(0, 0, 0, 0.4) inset; 
@@ -226,3 +281,182 @@ footer{
   max-width: 32px
 }
 
+
+/* ==============================
+      CSS For the Animation 1
+================================= */
+@keyframes color-change {
+  0% {fill: #fcffad;}
+  50% {fill: #edc655;}
+  75% {fill: #fa8f56;}
+  100% {fill: #f76414;}
+}
+
+.sun { /*this can be combine into one line ex: animation: 4s color-change infinite alternate linear */
+  animation-duration: 4s;
+  animation-name: color-change;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes cloud-move {
+  from {transform: translate(0,50px);}
+  to {transform: translate(200px,50px);}
+}
+
+.cloud-front {
+  animation: 30s cloud-move infinite alternate linear;
+}
+
+@keyframes cloud-move-reverse {
+  from {transform: translate(446px,48px);}
+  to {transform: translate(100px, 48px);}
+}
+
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
+
+/* ==============================
+      CSS For the Animation 2
+================================= */
+
+#XMLID_1057_{ /*sun*/
+ animation-duration: 4s;
+  animation-name: color-change;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes clouds-moving{
+  from {transform: translate(-50px, 1px);}
+  to {transform: translate(100px, 1px);}
+}
+
+#XMLID_59_ { /*cloud 1*/
+  animation: 6s clouds-moving infinite alternate linear;
+}
+
+#XMLID_64_ { /*cloud 2*/ 
+  animation: 6s clouds-moving infinite alternate linear;
+}
+
+@keyframes road-move{
+  from {transform: translate(-1000px, 1px);}
+  to {transform: translate(1000px, 1px);}
+}
+
+#XMLID_129_
+{ 
+  animation: 3s road-move infinite linear;
+}
+
+#XMLID_187_
+{ 
+  animation: 3s road-move infinite linear;
+}
+
+#XMLID_325_
+{ 
+  animation: 3s road-move infinite linear;
+}
+
+#XMLID_3_
+{ 
+  animation: 3s road-move infinite linear;
+}
+
+#XMLID_324_
+{ 
+  animation: 3s road-move infinite linear;
+}
+
+#XMLID_190_
+{ 
+  animation: 3s road-move infinite linear;
+}
+
+#XMLID_5_
+{ 
+  animation: 3s road-move infinite linear;
+}
+
+
+/* Media Quieries */
+
+/* ==============================
+Medium devices (640px and larger)
+================================= */
+
+  @media only screen and (min-width: 640px) {
+    header {
+      text-align: unset;
+      padding: 20px 0 13px;
+    }
+  }
+    nav 
+    {
+      width: auto;
+      float: right;
+      margin-top: 4px;
+    }
+
+    #hero span { display: block; }
+
+    .col-md-6 {
+      width: 50%;
+    } /*This means that each column will take up 50% of the original 100%, or, 
+    in terms of the 12-column grid, 6 grid columns. */
+
+    [class*="col-"] { /* When "*' is placed together with col-, it ensures that every class with at least col- in it will be affected.*/
+      float: left;
+      padding: 15px 0px 0px 15px ;
+    }
+
+    /*when you floated the columns, you removed them from the normal flow of the page, 
+    and other elements that were below them moved up to take their place, which can cause overlapping
+    To prevent this, you need to “clear” the flow with the code below.*/
+
+    .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    #about h3 { margin-top: 0;}
+    #about h1, h2 {text-align: center;}
+
+    .container {
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #about-picture {  /*To make animation responsive*/
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    }
+  
+
+
+/* ==============================
+Large devices (1024px or larger)
+================================= */
+@media only screen and (min-width: 1024px) {
+  .col-lg-7 {
+    width: 58.33%;}
+  
+  .col-lg-5 {
+      width: 41.66%;}
+
+}
+
+/* ==============================
+X-large devices (1440px or larger)
+================================= */
+@media only screen and (min-width: 1440px) {
+}
