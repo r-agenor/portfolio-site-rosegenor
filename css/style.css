@@ -218,12 +218,12 @@
     }
 
     .logo{        
-      max-width: 250px;
+      max-width: 150px;
     }
 
     header {
       background-color: #c9d57c;
-      text-align: center;
+      /*text-align: center;*/
       padding: 10px;
       /*margin: 10px 10px 0px 10px;*/
       border-bottom: 3px solid #4a4a4a; 
@@ -243,14 +243,48 @@
 /*=================================
           Navigation Styling 
 =================================*/
+
+    .navtoggle li:not(:last-child) { /*This will hide (display: none;) all list elements (<li>) except for the last one (:last-child) Meaning all menu items but the hamburger are hidden*/
+      display: none;
+    }     
+
+    .navtoggle, .navtoggle.responsive {
+    position: relative; /* Ensure it's the positioning reference */
+    display: flex;      /* Aligns children horizontally */
+    align-items: center; /* Vertically centers children like the logo and icon */
+    justify-content: space-between; /* Distributes space between logo and menu */
+    }
+
+    .navtoggle li .icon {
+      position: absolute;
+      /*padding-right: 0;*/
+      top: 50%; /* Center vertically */
+      transform: translateY(-50%); /* Adjust to perfectly center */
+      right: 15px;
+      font-size: 20px;
+    }
+
+    .navtoggle.responsive nav {
+      padding: 12px 0 0;
+    }
+    .navtoggle.responsive li  {
+      display: block;
+      padding: 10px 0;
+      border-top: 1px solid #002f18;
+    }
+    
+    .navtoggle.responsive li:last-child  {
+      padding: 60px 0 10px;
+    }
+
     nav > ul {
       list-style-type: none;
       padding: 0;
+      margin: 0;
       width: 100%
     }
 
     nav > ul > li{
-      display: inline-block;
       position: relative;
     }
 
@@ -490,6 +524,22 @@ Medium devices (640px and larger)
       margin-top: 4px;
     }
 
+    nav > ul {
+      margin: 1em 0;
+    }
+    
+/*the next two codes help ensure that the menu labels are listed and the hamburger icon is gone when coverting to larger screens*/
+    .navtoggle li:not(:last-child) {
+      display: inline-block;
+    }
+    .navtoggle li:last-child {
+      display: none;
+    }
+
+    nav > ul > li{
+      display: inline-block;
+    }
+
     #hero span { display: block; }
 
     .col-md-6 {
@@ -512,6 +562,10 @@ Medium devices (640px and larger)
     width: 100%;
     max-width: 100%;
     height: auto;
+    }
+
+    .logo{   /*To bring logo back to orginal size*/      
+      max-width: 250px;
     }
   }
 
