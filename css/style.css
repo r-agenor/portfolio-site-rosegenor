@@ -12,12 +12,12 @@
   box-sizing: border-box;
 }
     body {
-        background-color: #f5f3f0;
+        background-color: #000000;
         font-family: "Roboto", sans-serif;
         font-size: 16px; /* Sets the font size to 16px */
         font-weight: 300; /* Sets the font weight to 300 */
         line-height: 1.6; /* Sets the line-height to 1.6 * the font-size */
-        color: #070707;
+        color: #E3E4E8;
       }
       
       h1, h2, h3, h4 {
@@ -84,44 +84,45 @@
 
       .button {
         display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block*/
-        background-color: #7c9948;
-        color: #002f18; /* needed to override the default link color */
+        background-color: #5A7D9A;
+        color: #E3E4E8; /* needed to override the default link color */
         font-weight: 400;
         padding: 10px;
         border-radius: 3px;
-        border: 2px solid #002f18;
-        border-bottom: 2px solid #002f18; /* width of the border, type, color */
+        border: 1px solid #5A7D9A;
+        border-bottom: 1px solid #5A7D9A; /* width of the border, type, color */
         transition: 0.2s opacity;
         
       }
 
       .button:hover {
-        opacity: 0.8; /* Reduces the opacity of the button to 80% */
-        color: #ffffff;
+        opacity: 0.9; /* Reduces the opacity of the button to 80% */
+        background-color: #000000;
+        color: #E3E4E8;
         text-decoration: none;
       }
 
      .button:active {
       opacity: 0.8; /* Reduces the opacity of the button to 80% */
-      color: #ffffff;
+      color: #F5F5DC;
       text-decoration: none;
     }
 
     .button.contact {
       background-color: transparent;
-      color: #002f18;
+      color: #5A7D9A;
       text-transform: uppercase;
-      border: 2px solid #002f18;
+      border: 1px solid #5A7D9A;
     }
 
     .button.contact:hover {
-      background-color: #7c9948;
-      color: #ffffff;
+      background-color: #5A7D9A;
+      color: #E3E4E8;
     }
 
     .button.contact:active {
       background-color: #645445;
-      color: #ffffff;
+      color: #E3E4E8;
       box-shadow: 0 5px #666;
       transform: translateY(4px);
     }
@@ -141,19 +142,19 @@
      padding: .25em;
      width: 80px;
      height: 80px;
-     background-color: #F8F8F8;
+     background-color: #5A7D9A;
     }
 
     .top-link svg {
-      fill: #000;
+      fill: #E3E4E8;
       width: 24px;
       height: 12px;
      }
      
      .top-link:hover {
-      background-color: #E8E8E8;
+      background-color: #748ea3;
         svg {
-        fill: #000000;
+        fill: #E3E4E8;
        }
      }
 
@@ -202,12 +203,13 @@
 
     #work .row{ /* using this ID, you are only styling elements with both the work id and the row class*/
       padding-bottom: 25px;
-      border-bottom: 1px solid #002f18;
+      border-bottom: 2px solid #1E3A5F;
     }
 
-    #hero h1{
+    #hero h1, h2{
       text-align: center; /*centers text*/
     }
+    #hero h1{ color: #5A7D9A}
 
     #work h2{
       text-align: center;
@@ -221,12 +223,13 @@
       max-width: 150px;
     }
 
+
     header {
-      background-color: #c9d57c;
+      background-color: #000000;
       /*text-align: center;*/
       padding: 10px;
       /*margin: 10px 10px 0px 10px;*/
-      border-bottom: 3px solid #4a4a4a; 
+      border-bottom: 1px solid #4a4a4a; 
       position: relative;
       
       /* box shadow*/
@@ -235,9 +238,9 @@
       height: [object Object]px; 
       /*background: #F8F8F8; 
       border: solid #BDBDBD 1px; */
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7)  ; 
-      -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7)  ; 
-      -moz-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7)  ; 
+      box-shadow: 0 5px 20px rgba(85, 84, 84, 0.7)  ; 
+      -webkit-box-shadow: 0 5px 20px rgba(85, 84, 84, 0.7)  ; 
+      -moz-box-shadow: 0 5px 20px rgba(85, 85, 85, 0.7)  ; 
     }
 
 /*=================================
@@ -270,7 +273,7 @@
     .navtoggle.responsive li  {
       display: block;
       padding: 10px 0;
-      border-top: 1px solid #002f18;
+      border-top: 1px solid #5A7D9A;
     }
     
     .navtoggle.responsive li:last-child  {
@@ -292,23 +295,23 @@
       padding: 0 15px;
       text-transform: uppercase;
       font-weight: 700;
-      color: #002f18;
+      color: #E3E4E8;
       
     }
 
     nav > ul > li > a:visited {
-      color: #002f18;
+      color: #E3E4E8;
       text-decoration: underline;
     }
 
     nav > ul > li > a:hover {
-      color: #eee4e1;
+      color: #5A7D9A;
       text-decoration: none;
     }
 
     nav > ul > li > a:active {
 
-      color: #eee4e1;
+      color: #C0A77D;
     }
 
 /*===============================
@@ -321,7 +324,7 @@ nav > ul > li > a:before, nav > ul > li > a:after
     left: 0px;
     width: 100%;
     height: 2px;
-    background: #FFF;
+    background: #5A7D9A;
     content: "";
     opacity: 0;
     transition: all 0.3s;
@@ -346,35 +349,78 @@ nav > ul > li > a:hover:before, nav > ul > li > a:hover:after
 } 
     
 
-/*=================================
+/*=========================================
           The Hero Section
-=================================*/
+==========================================*/
 #hero {
-  background-color: #c9d57c;
+  background-color: #000000;
+  color: #E3E4E8;
   padding: 20px 0;
   display: inline-block;
   width: 100%;
 }
 
+/* #hero {
+  background-color: #000000;
+  color: #E3E4E8;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*
+.hero-container {
+  display: flex;
+  flex-wrap: wrap; /* Ensures it wraps on smaller screens 
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+} 
+
+.hero-text {
+  flex: 1; /* Takes up available space 
+  padding: 20px;
+  text-align: left; 
+} */
+
+.hero-image {
+  flex: 1; /* Takes up available space */
+  /*text-align: center;*/
+  display: none; /* Default: hidden */
+}
+
+.hero-image img {
+  transform: scaleX(-1);
+  max-width: 100%;
+  height: auto;
+}
+
+.heroButton {
+  text-align: center;
+}
 
 
 /*=============================== 
           Footer Styling 
 =================================*/
 footer{
-  background-color: #c9d57c;
+  background-color: #000000;
+  color: #E3E4E8;
   padding: 10px;
   margin: 25px 0px 0px 0px;
   text-align: center;
+  border-top: solid #4a4a4a 1px; 
 
 /* Box Shadow */
 
  /* width: [object Object]px; 
 	height: [object Object]px; */
-	border: solid #BDBDBD 1px; 
-	box-shadow: 0 0 21px rgba(0, 0, 0, 0.4) inset; 
-	-webkit-box-shadow: 0 0 21px rgba(0, 0, 0, 0.4) inset; 
-	-moz-box-shadow: 0 0 21px rgba(0, 0, 0, 0.4) inset; 
+	
+	box-shadow: 0 5px 21px rgba(85, 84, 84, 0.7) inset; 
+	-webkit-box-shadow: 0 5px 21px rgba(85, 84, 84, 0.4) inset; 
+	-moz-box-shadow: 0 5px 21px rgba(85, 85, 85, 0.7) inset; 
 }
 
 
@@ -541,6 +587,30 @@ Medium devices (640px and larger)
     }
 
     #hero span { display: block; }
+/*========================================================
+    For Hero
+=========================================================*/
+#hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}    
+
+/*.hero-co;ntainer {
+      flex-direction: row; /* Side-by-side layout 
+    }
+  
+    
+ /* .hero-text {
+    flex: 1;
+    text-align: center;
+}*/
+
+  .hero-image {
+      display: block; /* Show the image */
+      flex: 1;
+      height: auto;
+  }
 
     .col-md-6 {
       width: 50%;
@@ -558,6 +628,12 @@ Medium devices (640px and larger)
       margin-right: auto;
     }
 
+.aboutPic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
     #about-picture {  /*To make about picture responsive*/
     width: 100%;
     max-width: 100%;
