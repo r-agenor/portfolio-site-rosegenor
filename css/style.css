@@ -203,7 +203,7 @@
 
     #work .row{ /* using this ID, you are only styling elements with both the work id and the row class*/
       padding-bottom: 25px;
-      border-bottom: 2px solid #1E3A5F;
+      border-bottom: 1px solid #5A7D9A;
     }
 
     #hero h1, h2{
@@ -350,7 +350,7 @@ nav > ul > li > a:hover:before, nav > ul > li > a:hover:after
     
 
 /*=========================================
-          The Hero Section
+          Home Page Hero Section
 ==========================================*/
 #hero {
   background-color: #000000;
@@ -358,6 +358,7 @@ nav > ul > li > a:hover:before, nav > ul > li > a:hover:after
   padding: 20px 0;
   display: inline-block;
   width: 100%;
+  
 }
 
 /* #hero {
@@ -387,7 +388,6 @@ nav > ul > li > a:hover:before, nav > ul > li > a:hover:after
 
 .hero-image {
   flex: 1; /* Takes up available space */
-  /*text-align: center;*/
   display: none; /* Default: hidden */
 }
 
@@ -431,7 +431,7 @@ footer{
 
 /* ==============================
       CSS For the Animation 1
-================================= */
+================================= 
 @keyframes color-change {
   0% {fill: #fcffad;}
   50% {fill: #edc655;}
@@ -439,7 +439,8 @@ footer{
   100% {fill: #f76414;}
 }
 
-.sun { /*this can be combine into one line ex: animation: 4s color-change infinite alternate linear */
+
+.sun { /*this can be combine into one line ex: animation: 4s color-change infinite alternate linear *
   animation-duration: 4s;
   animation-name: color-change;
   animation-iteration-count: infinite;
@@ -453,8 +454,9 @@ footer{
 }
 
 .cloud-front {
-  animation: 30s cloud-move infinite alternate linear;
+  animation: 30s cloud-move, infinite alternate linear;
 }
+
 
 @keyframes cloud-move-reverse {
   from {transform: translate(446px,48px);}
@@ -464,7 +466,7 @@ footer{
 .cloud-back {
   animation: 34s cloud-move-reverse infinite alternate linear;
 }
-
+*/
 
 /* ==============================
       CSS For the Animation 2
@@ -534,9 +536,9 @@ footer{
 
 /* Media Quieries */
 
-/* ==============================
-Medium devices (640px and larger)
-================================= */
+/* ===========================================================================================
+                            Medium devices (640px and larger)
+============================================================================================== */
 
   @media only screen and (min-width: 640px) {
     
@@ -552,7 +554,7 @@ Medium devices (640px and larger)
 
     [class*="col-"] { /* When "*' is placed together with col-, it ensures that every class with at least col- in it will be affected.*/
       float: left;
-      padding: 15px 0px 0px 15px ;
+      padding: 15px 15px 15px 15px ;
     }
     
     body
@@ -617,8 +619,23 @@ Medium devices (640px and larger)
     } /*This means that each column will take up 50% of the original 100%, or, 
     in terms of the 12-column grid, 6 grid columns. */
 
+    .col-md-5 {
+      width: 100%;
+      
+    } 
+    .aboutPic{
+      padding-top: 200px;
+    }
+
+
+    ul.skillsTools {
+      list-style-type: none;
+      text-align: center;
+      padding: 0;
+      margin: 0;
+         }
   
-    #about h3 { margin-top: 0;}
+    #about h3 { margin-top: 0; text-align: center;}
     #about h1, h2 {text-align: center;}
 
    
@@ -628,16 +645,15 @@ Medium devices (640px and larger)
       margin-right: auto;
     }
 
-.aboutPic {
+/*.aboutPic {
   display: flex;
   justify-content: center;
   align-items: center;
 
-}
-    #about-picture {  /*To make about picture responsive*/
-    width: 100%;
-    max-width: 100%;
-    height: auto;
+}*/
+    #about .col-md-6 .aboutPic {  /*To make about picture responsive*/
+    padding: 150px 0px 0px 0px;
+    
     }
 
     .logo{   /*To bring logo back to orginal size*/      
@@ -656,9 +672,6 @@ Large devices (1024px or larger)
     margin-right: auto;
   }
   
-  .col-lg-7 {
-    width: 58.33%;}
-  
   .col-lg-5 {
       width: 41.66%;}
 
@@ -674,6 +687,9 @@ Large devices (1024px or larger)
         
        #about-page .col-md-6 {
          width: 100%;
+      }
+  .aboutPic{
+        padding-top: 0px;
       }
 
 }

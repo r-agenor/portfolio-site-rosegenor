@@ -42,9 +42,9 @@
         </div>
     </div>
 
-    <div><!--Second row for content block []-->
-        <div class="container "> <!--this is for remaining content-->
-            <div class="aboutPic">
+    <div class="container "><!--Second row for content block []-->
+        <div class="row "> <!--this is for remaining content-->
+            <div class="aboutPic col-md-6 col-lg-5">
                 <picture >
                     <source srcset="img/me1x.png" media="(max-width:767px)">
                     <img src="img/me2x.png" alt="My Image" >
@@ -53,24 +53,28 @@
 
         <div class="row"><!--this div will hold our two columns-->
 
-            <div class="col-lg-7"><!--First Column-->
-                <h2>My Story</h2>
-                    <p>Hi there! My name is Rose, I am a first generation Haitian-American born and raised in Miami Florida. I have a wide list of things that I am passionate about, ranging from art and traveling, to food and fitness. I have a degree in Biology and a minor in Chemistry and I’ve always been fascinated by the intricacies of science and the beauty of nature. My diverse interests have shaped me into a well-rounded individual who wants to blend education and creativity in my professional endeavors. 
+            <div class="col-md-6 col-lg-7"><!--First Column-->
+                    <p>Hi there! My name is Rose. I am a first-generation Haitian-American, born and raised in Miami, Florida. 
+                        I’ve always been fascinated by the intricacies of science and the beauty of art and nature. 
+                        After earning my degree in Biology with a minor in Chemistry, I took time to travel the world, experience life, and discover new passions. 
                         </p>
-                    <p>Art has always been a significant part of my life, from doodling in the margins of my notebooks to designing innovative digital experiences. Traveling the world has broadened my perspective, introducing me to different cultures, cuisines, and art forms, which continually inspire my work. Whether it's sampling exotic dishes or finding new ways to stay fit while exploring new places, I thrive on the energy and excitement that comes with new experiences. When I'm not on the move, you can find me indulging in my favorite anime series, which often sparks new ideas for my designs. My background in biology and chemistry has equipped me with a unique analytical mindset, while my love for art and design fuels my creativity. 
+                    <p>From painting and illustrating to sewing my own clothes, creativity has always been a significant part of my life. 
+                        What started as doodling in the margins of my notebooks has evolved into designing innovative digital experiences. 
+                        I blend my scientific background with my artistic passion to create educational and impactful projects that enhance user experiences and make learning more engaging. 
                         </p>
-                    <p>I am eager to combine these strengths to create educational, beautiful, and innovative UX/UI work that enhances user experiences and makes learning more engaging. My goal is to develop user-centered designs that not only looks stunning but also provide intuitive and effective solutions. I believe that by merging my scientific background with my artistic passion, I can contribute to the creation of impactful and meaningful digital products. Thank you for taking the time to learn a bit about me. I look forward to connecting and collaborating on projects that make a difference! 
+                    <p>I strive to develop user-centered designs that are not only visually stunning but also intuitive and effective. 
+                        Thank you for taking the time to learn a bit about me—I look forward to connecting and collaborating on projects that make a difference!
                         </p>
-                    <a href="files/agenor_ux_cv.docx.pdf" target="_blank" class="button contact"> View my CV</a>
+                    <a href="files/agenor_ux_cv.docx.pdf" target="_blank" style="display: block; margin: auto; width: 60%; text-align: center;" class="button" > VIEW MY RESUME</a>
             </div>
 
-            <div class="col-lg-8"><!--Second Column-->
+            <div class="col-md-5"><!--Second Column-->
                 <h2>Skills and Tools</h2>
                     <div class="row"><!--over arching row for skills column and tools column(this will allow them to move around acting as two columns instead of two rows on tablets)-->
                         
                              <div class="col-md-6"><!--column for skills-->
                                 <h3>Relevant Skills</h3>
-                                <ul>
+                                <ul class="skillsTools">
                                     <li>UX/UI</li>
                                     <li>Frontend Development</li>
                                     <li>Wireframing and Prototyping</li>
@@ -81,7 +85,7 @@
 
                         <div class="col-md-6"><!--Start of Tools column-->
                             <h3>My Tool Box</h3>
-                            <ul>
+                            <ul class="skillsTools">
                                 <li>Figma</li>
                                 <li>Procreate</li>
                                 <li>Canva</li>
