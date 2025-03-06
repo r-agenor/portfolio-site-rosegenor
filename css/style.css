@@ -84,7 +84,7 @@
 
       .button {
         display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block*/
-        background-color: #5A7D9A;
+        background-color: #4C6982;
         color: #E3E4E8; /* needed to override the default link color */
         font-weight: 400;
         padding: 10px;
@@ -116,7 +116,7 @@
     }
 
     .button.contact:hover {
-      background-color: #5A7D9A;
+      background-color: #4C6982;
       color: #E3E4E8;
     }
 
@@ -142,7 +142,7 @@
      padding: .25em;
      width: 80px;
      height: 80px;
-     background-color: #5A7D9A;
+     background-color: #4C6982;
     }
 
     .top-link svg {
